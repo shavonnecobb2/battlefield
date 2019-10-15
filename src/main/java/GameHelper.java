@@ -4,9 +4,9 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 public class GameHelper {
-    private static final String alphabet = "abcdefg";
-    private int gridLength = 7;
-    private int gridSize = 49;
+    private static final String alphabet = "abcd";
+    private int gridLength = 4;
+    private int gridSize = 16;
     private int[] grid = new int[gridSize];
     private int comCount = 0;
 
@@ -39,7 +39,7 @@ public class GameHelper {
         }
         while (!success & attempts++ < 200) {
             location = (int) (Math.random() * gridSize);
-            System.out.println("Try " + location);
+            System.out.println(location);
             int x = 0;
             success = true;
             while (success && x < comSize) {

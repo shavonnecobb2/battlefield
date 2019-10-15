@@ -18,10 +18,12 @@ public class SimpleBattleship {
         if (index >= 0) {
             locationCells.remove(index);
             result = "hit";
+            return result;
         }
         if (locationCells.isEmpty()) {
             result = "kill";
             System.out.println("Ouch! You sunk " + name + " : ( ");
+
         } if (index <= 0) {
             result = "miss";
         }

@@ -12,13 +12,13 @@ public class BattleshipBust {
         ship1.setName("Lucille");
         SimpleBattleship ship2 = new SimpleBattleship();
         ship2.setName("Drax");
-        SimpleBattleship ship3 = new SimpleBattleship();
-        ship3.setName("Lilith");
+//        SimpleBattleship ship3 = new SimpleBattleship();
+//        ship3.setName("Lilith");
 //        SimpleBattleship ship4 = new SimpleBattleship();
 //        ship4.setName("Vincent");
         battleshipList.add(ship1);
         battleshipList.add(ship2);
-        battleshipList.add(ship3);
+//        battleshipList.add(ship3);
 //        battleshipList.add(ship4);
 
         System.out.println("Your goal is to sink the three Ships.");
@@ -33,10 +33,10 @@ public class BattleshipBust {
             ArrayList<String> newLocation = helper.placeBattleship(3);
             ship2.setLocationCells(newLocation);
         }
-        for (SimpleBattleship lilithToSet : battleshipList) {
-            ArrayList<String> newLocation = helper.placeBattleship(3);
-            ship3.setLocationCells(newLocation);
-        }
+//        for (SimpleBattleship lilithToSet : battleshipList) {
+//            ArrayList<String> newLocation = helper.placeBattleship(3);
+//            ship3.setLocationCells(newLocation);
+//        }
 //        for (SimpleBattleship vincentToSet : battleshipList) {
 //            ArrayList<String> newLocation = helper.placeBattleship(3);
 //            ship4.setLocationCells(newLocation);
@@ -60,7 +60,7 @@ public class BattleshipBust {
             if (result.equals("hit")) {
                 break;
             }
-            if (result.equals("kill")) {
+            else if (result.equals("kill")) {
                 battleshipList.remove(x);
                 break;
             }
